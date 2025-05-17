@@ -6,7 +6,6 @@ def display_main_menu():
      print("Enter some number separated by commas(e.g. 5, 67, 32)")
 
 def calc_average(temperature):
-     print("calc_average")
      total = sum(temperature)
      n = len(temperature)
      A = total/n
@@ -30,6 +29,10 @@ def find_min_max(temperature):
 def sort_temperature(temperature):
      temperature.sort()
      return temperature
+def Calculate_Median(temperature):
+     x = statistics.median(temperature)
+     return x
+
 
      
 
@@ -41,8 +44,12 @@ def main():
     asc_ord = sort_temperature(temperature)
     average = calc_average(temperature)
     min_max = find_min_max(temperature)
+    median = Calculate_Median(temperature)
+    print(str(asc_ord))
     print("Average = " + str(average))
+    print("Median = " + str(median))
     print("min,max = " + str(min_max))
+    
    
  
 
